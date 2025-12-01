@@ -35,9 +35,9 @@ body{
   content:"";
   position:absolute;inset:-25%;
   background:
-    radial-gradient(40% 30% at 15% 35%,rgba(0,226,143,.30),transparent 60%),
-    radial-gradient(35% 25% at 75% 20%,rgba(59,167,255,.25),transparent 60%),
-    radial-gradient(45% 40% at 55% 75%,rgba(10,225,200,.25),transparent 60%);
+    radial-gradient(45% 35% at 20% 40%,rgba(0,226,143,.35),transparent 65%),
+    radial-gradient(40% 40% at 75% 30%,rgba(0,255,160,.22),transparent 60%),
+    radial-gradient(35% 50% at 50% 75%,rgba(0,196,120,.25),transparent 60%);
   animation:float 20s ease-in-out infinite alternate;
 }
 .aurora::after{animation-duration:27s;mix-blend-mode:screen;opacity:.85}
@@ -88,6 +88,31 @@ header{
   max-width:600px;
   margin-top:10px;
 }
+
+  .contact-boxes {
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px;
+  margin-top:18px;
+}
+  
+.contact-btn {
+  background:linear-gradient(90deg,var(--accent),#0ae1a2);
+  padding:12px 22px;
+  border-radius:999px;
+  font-weight:700;
+  color:#081018;
+  text-decoration:none;
+  font-size:1rem;
+  transition:.2s;
+  border:1px solid #00c57e;
+  box-shadow:0 0 14px rgba(0,226,143,.35);
+}
+.contact-btn:hover {
+  transform:translateY(-3px);
+  box-shadow:0 0 24px rgba(0,226,143,.55);
+}
+
 
 /* Section titles */
 .section-title{
@@ -229,6 +254,7 @@ document.getElementById("year").textContent=new Date().getFullYear();
 
 </body>
 </html>
+
 
 
 
