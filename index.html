@@ -33,18 +33,26 @@ body{
 }
 .aurora::before,.aurora::after{
   content:"";
-  position:absolute;inset:-25%;
+  position:absolute;
+  inset:-25%;
   background:
-    radial-gradient(45% 35% at 20% 40%,rgba(0,226,143,.35),transparent 65%),
-    radial-gradient(40% 40% at 75% 30%,rgba(0,255,160,.22),transparent 60%),
-    radial-gradient(35% 50% at 50% 75%,rgba(0,196,120,.25),transparent 60%);
-  animation:float 20s ease-in-out infinite alternate;
+    radial-gradient(40% 30% at 20% 35%,rgba(0,226,143,.28),transparent 60%),
+    radial-gradient(35% 25% at 75% 25%,rgba(59,167,255,.25),transparent 60%),
+    radial-gradient(30% 25% at 60% 75%,rgba(10,225,200,.25),transparent 60%),
+    radial-gradient(25% 20% at 20% 80%,rgba(0,226,143,.18),transparent 70%);
+  animation:floatAurora 20s ease-in-out infinite alternate;
 }
-.aurora::after{animation-duration:27s;mix-blend-mode:screen;opacity:.85}
-@keyframes float{
-  0%{transform:translate(-1%,-1%) scale(1)}
-  100%{transform:translate(2%,3%) scale(1.05)}
+.aurora::after{
+  animation-duration:27s;
+  mix-blend-mode:screen;
+  opacity:.90;
 }
+
+@keyframes floatAurora{
+  0%{transform:translate3d(-1%,-1%,0) scale(1)}
+  100%{transform:translate3d(2%,3%,0) scale(1.05)}
+}
+
 
 /* Layout */
 section{padding:70px 0}
@@ -254,6 +262,7 @@ document.getElementById("year").textContent=new Date().getFullYear();
 
 </body>
 </html>
+
 
 
 
