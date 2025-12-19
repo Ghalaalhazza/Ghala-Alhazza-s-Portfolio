@@ -158,57 +158,53 @@ header{
   margin-bottom:16px;
 }
 
-/* Project cards like the screenshot */
+/* Projects (dark glass cards like Experience) */
 .projects-grid{
   display:flex;
   flex-direction:column;
-  gap:18px;
+  gap:16px;
 }
 
 .project-card{
-  border-radius:22px;
-  padding:22px;
-  border:1px solid rgba(0,0,0,.06);
-  overflow:hidden;
-  position:relative;
-}
-
-.project-inner{
-  display:grid;
-  grid-template-columns: 1.05fr .95fr;
-  gap:18px;
-  align-items:center;
+  border-radius:18px;
+  padding:18px;
+  border:1px solid rgba(255,255,255,.10);
+  background:rgba(255,255,255,.04);
+  box-shadow:0 18px 50px rgba(0,0,0,.25);
 }
 
 .badge{
   display:inline-flex;
   align-items:center;
   gap:8px;
-  padding:6px 10px;
+  padding:7px 12px;
   border-radius:999px;
   font-weight:900;
   font-size:.78rem;
-  background:rgba(0,0,0,.08);
-  color:rgba(0,0,0,.72);
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(255,255,255,.06);
+  color:var(--text);
 }
 
 .project-title{
   margin-top:10px;
-  font-size:1.65rem;
+  font-size:1.35rem;
   font-weight:950;
-  letter-spacing:-.7px;
-  color:rgba(0,0,0,.88);
+  letter-spacing:-.6px;
+  color:var(--text);
 }
+
 .project-sub{
   margin-top:6px;
   font-weight:800;
   font-size:.95rem;
-  color:rgba(0,0,0,.60);
+  color:rgba(231,238,248,.70);
 }
+
 .project-desc{
   margin-top:10px;
-  color:rgba(0,0,0,.65);
-  max-width:52ch;
+  color:var(--muted);
+  max-width:70ch;
 }
 
 .tags{
@@ -218,13 +214,13 @@ header{
   margin-top:14px;
 }
 .tag{
-  padding:7px 10px;
+  padding:8px 10px;
   border-radius:999px;
   font-weight:900;
   font-size:.78rem;
-  background:rgba(255,255,255,.55);
-  border:1px solid rgba(0,0,0,.08);
-  color:rgba(0,0,0,.70);
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(255,255,255,.06);
+  color:rgba(231,238,248,.85);
 }
 
 .card-actions{
@@ -375,32 +371,43 @@ footer{
   </div>
 </section>
 
-<!-- PROJECTS (الجزء الممتع) -->
 <section id="projects" class="container">
   <h2 class="section-title">Featured Projects</h2>
 
   <div class="projects-grid">
 
-    <!-- Card 1 -->
-    <article class="project-card" style="background:var(--c-cream);">
-      <div class="project-inner">
-        <div>
-          <span class="badge">Case Study</span>
-          <div class="project-title">Asset Tracker System</div>
-          <div class="project-sub">Secure CRUD · Dashboards · Internal Tool</div>
-          <p class="project-desc">
-            Asset management tool for multi-site IT workflows: search, edit, export, custody tracking, and safer data handling.
-          </p>
-          <div class="tags">
-            <span class="tag">HTML/CSS/JS</span>
-            <span class="tag">Secure UI</span>
-            <span class="tag">Data Validation</span>
-          </div>
-          <div class="card-actions">
-            <a class="card-btn" href="#" target="_blank" rel="noopener">View Project</a>
-            <a class="card-btn dark" href="#" target="_blank" rel="noopener">GitHub</a>
-          </div>
-        </div>
+    <article class="project-card">
+      <span class="badge">Case Study</span>
+      <div class="project-title">Asset Tracker System</div>
+      <div class="project-sub">Secure CRUD · Dashboards · Internal Tool</div>
+      <p class="project-desc">
+        Asset management tool for multi-site IT workflows: search, edit, export, custody tracking, and safer data handling.
+      </p>
+
+      <div class="tags">
+        <span class="tag">HTML/CSS/JS</span>
+        <span class="tag">Secure UI</span>
+        <span class="tag">Data Validation</span>
+      </div>
+    </article>
+
+    <article class="project-card">
+      <span class="badge">UI/UX</span>
+      <div class="project-title">Digital Contact Cards</div>
+      <div class="project-sub">Branding · vCard · Responsive</div>
+      <p class="project-desc">
+        Bilingual digital cards with clean layout, downloadable vCard, and safe identity presentation for leadership profiles.
+      </p>
+
+      <div class="tags">
+        <span class="tag">UI/UX</span>
+        <span class="tag">Responsive</span>
+        <span class="tag">Accessibility</span>
+      </div>
+    </article>
+
+  </div>
+</section>
 
         <div class="mock">
           <div class="phone">
